@@ -1,0 +1,48 @@
+.footer {
+  padding: 10px 20px 15px 20px;
+  background: @bg-footer;
+
+  .author {
+    font-family: 'Roboto', sans-serif;
+    font-size: (14rem/16);
+    line-height: (16rem/16);
+    color: #777;
+  }
+
+  .contacts {
+    margin-top: 15px;
+    a {
+      font-size: (16rem/16);
+      line-height: (16rem/16);
+      text-decoration: underline;
+      color: #000;
+    }
+  }
+  .git {
+    margin-bottom: 6px;
+  }
+  .mail {
+  }
+}
+
+@media screen and(min-width:992px) {
+  .footer {
+    padding-top: 16px;
+    .contacts {
+      margin-top: 0;
+      a {
+        font-size: (18rem/16);
+        line-height: (16rem/16);
+      }
+    }
+
+    .author {
+      font-size: (18rem/16);
+      line-height: (16rem/16);
+    }
+
+    .git {
+      margin-bottom: 9px;
+    }
+  }
+}

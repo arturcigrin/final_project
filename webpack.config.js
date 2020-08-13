@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   mode: 'development',
-  entry: path.resolve(__dirname, './src/app.js'),
+  entry: path.resolve(__dirname, './src/frontend/app.js'),
   output: {
     filename: 'bundle.[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
@@ -15,7 +15,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000,
+    port: 8080,
   },
   optimization: {
     splitChunks: {
@@ -24,7 +24,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './src/frontend/index.html',
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
@@ -53,11 +53,11 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              ident: 'postcss',
-              plugins: [require('autoprefixer')],
               sourceMap: true,
+              plugins: () => [require('autoprefixer')()],
             },
           },
+
           {
             loader: 'less-loader',
             options: {

@@ -1,0 +1,67 @@
+.main-homepage {
+  z-index: 0;
+  .card_categories {
+    z-index: 0;
+    position: relative;
+    padding: 20px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 2px 7px 12px -4px rgba(0, 0, 0, 0.46);
+    border: 2px solid #777;
+    cursor: pointer;
+
+    &__title {
+      font-family: 'Roboto', sans-serif;
+      font-size: (25rem /16);
+      font-weight: bold;
+      line-height: (20rem/16);
+      text-align: center;
+      text-transform: uppercase;
+      word-break: break-word;
+    }
+
+    .card_categories__room-counter {
+      position: absolute;
+      top: 9%;
+      right: 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: orangered;
+      color: #fff;
+      font-size: (17rem/16);
+      line-height: (15rem/16);
+      font-weight: bold;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .main-homepage {
+    .card_categories {
+      transition: 0.4s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main-homepage {
+    .card_categories {
+      &__title {
+        font-size: (39rem /16);
+        line-height: (44rem/16);
+      }
+
+      .card_categories__room-counter {
+        width: 35px;
+        height: 35px;
+        font-size: (22rem/16);
+      }
+    }
+  }
+}
