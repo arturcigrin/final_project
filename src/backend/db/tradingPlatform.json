@@ -4,7 +4,7 @@
     { "id": 3, "nameRoom": "java", "roomCounter": 0 },
     { "id": 4, "nameRoom": "python", "roomCounter": 0 },
     { "id": 5, "nameRoom": "swift", "roomCounter": 0 },
-    { "id": 6, "nameRoom": "c", "roomCounter": 0 },
+    { "id": 6, "nameRoom": "c", "roomCounter": 1 },
     { "id": 7, "nameRoom": "c#", "roomCounter": 0 },
     { "id": 8, "nameRoom": "c++", "roomCounter": 0 },
     { "id": 9, "nameRoom": "GoLang", "roomCounter": 0 },

@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   mode: 'development',
-  entry: path.resolve(__dirname, './src/frontend/app.js'),
+  entry: ['@babel/polyfill', path.resolve(__dirname, './src/frontend/app.js')],
   output: {
     filename: 'bundle.[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
